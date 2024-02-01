@@ -1,0 +1,14 @@
+.pageNotFound .contentWrapper {
+  text-align: center;
+  color: #173d77;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageNotFound .bigText {
+  font-size: 150px;
+  font-weight: 700;
+}
+.pageNotFound .smallText {
+  font-size: 44px;
+}
