@@ -70,7 +70,7 @@ const Header = () => {
 
   return (
     <header
-      className={`header fixed transform translate-y-0 w-full h-[60px] flex items-center transition-all ease duration-500 ${
+      className={`header fixed transform translate-y-0 w-full flex items-center transition-all ease duration-500 ${
         mobileMenu ? "mobileView" : ""
       } ${show}`}
     >

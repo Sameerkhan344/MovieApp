@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
 import { useSelector } from "react-redux";
@@ -21,11 +21,16 @@ const HeroBanner = () => {
     setBackground(bg);
   }, [data]);
 
-  const SearchQueryHandler = (e) => {
-    if (e.key === "Enter" && query.length > 0) {
+  const handleSearch = () => {
+    if (query.length > 0) {
       navigate(`/search/${query}`);
     }
   };
+
+  //    const SearchQueryHandler = (e) => {
+  //  if (e.key === "Enter" && query.length > 0) {
+  //   navigate(`/search/${query}`);
+  //    }
 
   return (
     <div className="w-[100%] h-[450px] md:h-[700px] bg-#04152d flex items-center relative ">
@@ -49,10 +54,15 @@ const HeroBanner = () => {
               h-[50px] bg-white outline-none border-none rounded-l-[30px] py-0 px-[15px] text-[14px] md:w-[calc(100%-150px)] md:h-[60px] md:text-[20px] md:py-0 px-[30px] text-[#000]"
               type="text"
               placeholder="Search for a movie or tv show..."
+              value={query}
               onChange={(e) => setQuery(e.target.value)}
-              onKeyUp={SearchQueryHandler}
+
+              // onKeyUp={handleSearch}
             />
-            <button className="w-[100px] h-[50px] md:w-[150px] md:h-[60px] md:text-[18px]">
+            <button
+              className="w-[100px] h-[50px] md:w-[150px] md:h-[60px] md:text-[18px]"
+              onClick={handleSearch}
+            >
               Search
             </button>
           </div>
