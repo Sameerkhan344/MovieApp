@@ -1,0 +1,9 @@
+.icon:hover {
+  box-shadow: 0 0 0.625em #da2f68;
+  color: #da2f68;
+}
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+}

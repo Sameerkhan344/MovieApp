@@ -1,0 +1,59 @@
+.header {
+  z-index: 9999;
+}
+
+.top {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+}
+.show {
+  background-color: #020c1b;
+}
+.hide {
+  background-color: #020c1b;
+  transform: translateY(-60px);
+}
+.header .contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+}
+
+.mobileView {
+  background: #020c1b;
+}
+.mobileView .menuItems {
+  transform: translateY(60px);
+  display: flex;
+}
+.menuItems {
+  animation: mobileMenu 0.3s ease forwards;
+}
+.menuItem {
+  cursor: pointer;
+}
+
+@keyframes mobileMenu {
+  0% {
+    transform: translateY(-130%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.searchBar {
+  transform: translateY(60px);
+  animation: mobileMenu 0.5s ease forwards;
+}
+/* mobile menu */
+
+svg {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+.menuItem:hover {
+  color: #da2f68;
+  font-weight: 700;
+}

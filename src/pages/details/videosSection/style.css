@@ -1,0 +1,120 @@
+.videosSection {
+  position: relative;
+  margin-bottom: 50px;
+}
+.videosSection .sectionHeading {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 25px;
+}
+.videosSection .videos {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  overflow-x: auto;
+  margin-right: -20px;
+  margin-left: -20px;
+  padding: 0 20px;
+  width: 100%;
+}
+.videosSection .videoItem {
+  position: relative;
+  width: 150px;
+  flex-shrink: 0;
+  cursor: pointer;
+  /* background-color: red; */
+}
+
+.videosSection .videoThumbnail {
+  aspect-ratio: 16 / 9;
+  margin-bottom: 15px;
+  position: relative;
+}
+.videosSection img {
+  position: relative;
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: all 0.7s ease-in-out;
+}
+.videosSection svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+}
+.videosSection .triangle {
+  stroke-dasharray: 240;
+  stroke-dashoffset: 480;
+  stroke: white;
+  transform: translateY(0);
+  transition: all 0.7s ease-in-out;
+}
+.videosSection .circle {
+  stroke: white;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 1300;
+  transition: all 0.5s ease-in-out;
+}
+.videosSection .videoThumbnail :hover img {
+  opacity: 0.5;
+}
+.videosSection .videoThumbnail :hover .triangle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: var(--pink);
+  animation: trailorPlay 0.7s ease-in-out;
+}
+.videosSection .videoThumbnail :hover .circle {
+  stroke-dashoffset: 0;
+  stroke: var(--pink);
+}
+
+.videosSection .videoTitle {
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis(1);
+}
+
+.videosSection .videoSkeleton {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-right: -20px;
+  margin-left: -20px;
+  padding: 0 20px;
+}
+
+.videosSection .videoSkeleton .skItem {
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.videosSection .videoSkeleton .skItem .thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.videosSection .videoSkeleton .skItem .row {
+  height: 20px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.videosSection .videoSkeleton .skItem .row2 {
+  height: 20px;
+  width: 75%;
+  border-radius: 10px;
+}
+.videosSection .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+}
